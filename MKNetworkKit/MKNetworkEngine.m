@@ -256,7 +256,7 @@ static NSOperationQueue *_sharedNetworkQueue;
     NSString *archivePath = [[self cacheDirectoryName] stringByAppendingPathComponent:pendingOperationFile];
     MKNetworkOperation *pendingOperation = [NSKeyedUnarchiver unarchiveObjectWithFile:archivePath];
     [self enqueueOperation:pendingOperation];
-    NSError *error = nil;
+    error = nil;
     [[NSFileManager defaultManager] removeItemAtPath:archivePath error:&error];
     if(error)
       DLog(@"%@", error);
@@ -541,7 +541,8 @@ static NSOperationQueue *_sharedNetworkQueue;
     if([self.memoryCacheKeys count] >= [self cacheMemoryCost])
     {
       NSString *lastKey = [self.memoryCacheKeys lastObject];        
-      NSData *data = [self.memoryCache objectForKey:lastKey];        
+      data = nil;
+      data = [self.memoryCache objectForKey:lastKey];
       NSString *filePath = [[self cacheDirectoryName] stringByAppendingPathComponent:lastKey];
       
       if([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
