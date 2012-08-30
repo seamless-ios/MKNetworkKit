@@ -1042,6 +1042,7 @@
     NSString *lastModified = [httpHeaders objectForKey:@"Last-Modified"];
     NSString *eTag = [httpHeaders objectForKey:@"ETag"];
     NSString *expiresOn = [httpHeaders objectForKey:@"Expires"];
+      NSLog(@"%@",expiresOn);
     
     NSString *contentType = [httpHeaders objectForKey:@"Content-Type"];
     // if contentType is image, 
