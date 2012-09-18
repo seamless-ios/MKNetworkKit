@@ -22,8 +22,8 @@
 		ABB5C2A4148B3B160056D3E9 /* MKNetworkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB5C295148B3B160056D3E9 /* MKNetworkKit.h */; };
 		ABB5C2A5148B3B160056D3E9 /* MKNetworkOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB5C296148B3B160056D3E9 /* MKNetworkOperation.h */; };
 		ABB5C2A6148B3B160056D3E9 /* MKNetworkOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB5C297148B3B160056D3E9 /* MKNetworkOperation.m */; };
-		ABB5C2A7148B3B160056D3E9 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB5C299148B3B160056D3E9 /* Reachability.h */; };
-		ABB5C2A8148B3B160056D3E9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB5C29A148B3B160056D3E9 /* Reachability.m */; };
+		ABB5C2A7148B3B160056D3E9 /* MKReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB5C299148B3B160056D3E9 /* MKReachability.h */; };
+		ABB5C2A8148B3B160056D3E9 /* MKReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB5C29A148B3B160056D3E9 /* MKReachability.m */; };
 		ABDC974A1498A8B60034CEBE /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDC97481498A8B60034CEBE /* NSData+Base64.h */; };
 		ABDC974B1498A8B60034CEBE /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDC97491498A8B60034CEBE /* NSData+Base64.m */; };
 /* End PBXBuildFile section */
@@ -49,8 +49,8 @@
 		ABB5C295148B3B160056D3E9 /* MKNetworkKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKNetworkKit.h; path = ../../MKNetworkKit/MKNetworkKit.h; sourceTree = "<group>"; };
 		ABB5C296148B3B160056D3E9 /* MKNetworkOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKNetworkOperation.h; path = ../../MKNetworkKit/MKNetworkOperation.h; sourceTree = "<group>"; };
 		ABB5C297148B3B160056D3E9 /* MKNetworkOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MKNetworkOperation.m; path = ../../MKNetworkKit/MKNetworkOperation.m; sourceTree = "<group>"; };
-		ABB5C299148B3B160056D3E9 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		ABB5C29A148B3B160056D3E9 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		ABB5C299148B3B160056D3E9 /* MKReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKReachability.h; sourceTree = "<group>"; };
+		ABB5C29A148B3B160056D3E9 /* MKReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKReachability.m; sourceTree = "<group>"; };
 		ABDC97481498A8B60034CEBE /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		ABDC97491498A8B60034CEBE /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,8 +149,8 @@
 		ABB5C298148B3B160056D3E9 /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
-				ABB5C299148B3B160056D3E9 /* Reachability.h */,
-				ABB5C29A148B3B160056D3E9 /* Reachability.m */,
+				ABB5C299148B3B160056D3E9 /* MKReachability.h */,
+				ABB5C29A148B3B160056D3E9 /* MKReachability.m */,
 			);
 			name = Reachability;
 			path = ../../MKNetworkKit/Reachability;
@@ -168,7 +168,7 @@
 				ABB5C2A2148B3B160056D3E9 /* MKNetworkEngine.h in Headers */,
 				ABB5C2A4148B3B160056D3E9 /* MKNetworkKit.h in Headers */,
 				ABB5C2A5148B3B160056D3E9 /* MKNetworkOperation.h in Headers */,
-				ABB5C2A7148B3B160056D3E9 /* Reachability.h in Headers */,
+				ABB5C2A7148B3B160056D3E9 /* MKReachability.h in Headers */,
 				AB8AF0CA148B445200ECE140 /* NSAlert+MKNetworkKitAdditions.h in Headers */,
 				AB3A309C148F0A4400D06246 /* NSDate+RFC1123.h in Headers */,
 				ABDC974A1498A8B60034CEBE /* NSData+Base64.h in Headers */,
@@ -230,7 +230,7 @@
 				ABB5C29F148B3B160056D3E9 /* NSString+MKNetworkKitAdditions.m in Sources */,
 				ABB5C2A3148B3B160056D3E9 /* MKNetworkEngine.m in Sources */,
 				ABB5C2A6148B3B160056D3E9 /* MKNetworkOperation.m in Sources */,
-				ABB5C2A8148B3B160056D3E9 /* Reachability.m in Sources */,
+				ABB5C2A8148B3B160056D3E9 /* MKReachability.m in Sources */,
 				AB8AF0CB148B445200ECE140 /* NSAlert+MKNetworkKitAdditions.m in Sources */,
 				AB3A309D148F0A4400D06246 /* NSDate+RFC1123.m in Sources */,
 				ABDC974B1498A8B60034CEBE /* NSData+Base64.m in Sources */,
