@@ -861,7 +861,10 @@
 
 - (BOOL)isReady {
   
-  return (self.state == MKNetworkOperationStateReady);
+    /*MKNetworkOperation overrides [NSOperation isReady] which prevents an 
+     NSOperationQueue from scheduling dependencies between operations.*/
+    
+  return (self.state == MKNetworkOperationStateReady && [super isReady]);
 }
 
 - (BOOL)isFinished 
