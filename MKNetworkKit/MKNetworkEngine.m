@@ -24,7 +24,7 @@
 //  THE SOFTWARE.
 
 #import "MKNetworkKit.h"
-#import "Reachability.h"
+#import "mknReachability.h"
 #define kFreezableOperationExtension @"mknetworkkitfrozenoperation"
 
 #ifdef __OBJC_GC__
@@ -44,7 +44,7 @@
 @interface MKNetworkEngine (/*Private Methods*/)
 
 @property (copy, nonatomic) NSString *hostName;
-@property (strong, nonatomic) Reachability *reachability;
+@property (strong, nonatomic) mknReachability *reachability;
 @property (copy, nonatomic) NSDictionary *customHeaders;
 @property (assign, nonatomic) Class customOperationSubclass;
 
@@ -118,7 +118,7 @@ static NSOperationQueue *_sharedNetworkQueue;
                                                  object:nil];
       
       self.hostName = hostName;
-      self.reachability = [Reachability reachabilityWithHostname:self.hostName];
+      self.reachability = [mknReachability reachabilityWithHostname:self.hostName];
       
       dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         

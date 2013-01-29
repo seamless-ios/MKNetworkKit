@@ -71,12 +71,12 @@ typedef enum
 	ReachableViaWWAN = 1
 } NetworkStatus;
 
-@class Reachability;
+@class mknReachability;
 
-typedef void (^NetworkReachable)(Reachability * reachability);
-typedef void (^NetworkUnreachable)(Reachability * reachability);
+typedef void (^NetworkReachable)(mknReachability * reachability);
+typedef void (^NetworkUnreachable)(mknReachability * reachability);
 
-@interface Reachability : NSObject
+@interface mknReachability : NSObject
 
 @property (nonatomic, copy) NetworkReachable    reachableBlock;
 @property (nonatomic, copy) NetworkUnreachable  unreachableBlock;
@@ -84,12 +84,12 @@ typedef void (^NetworkUnreachable)(Reachability * reachability);
 
 @property (nonatomic, assign) BOOL reachableOnWWAN;
 
-+(Reachability*)reachabilityWithHostname:(NSString*)hostname;
-+(Reachability*)reachabilityForInternetConnection;
-+(Reachability*)reachabilityWithAddress:(const struct sockaddr_in*)hostAddress;
-+(Reachability*)reachabilityForLocalWiFi;
++(mknReachability*)reachabilityWithHostname:(NSString*)hostname;
++(mknReachability*)reachabilityForInternetConnection;
++(mknReachability*)reachabilityWithAddress:(const struct sockaddr_in*)hostAddress;
++(mknReachability*)reachabilityForLocalWiFi;
 
--(Reachability *)initWithReachabilityRef:(SCNetworkReachabilityRef)ref;
+-(mknReachability *)initWithReachabilityRef:(SCNetworkReachabilityRef)ref;
 
 -(BOOL)startNotifier;
 -(void)stopNotifier;
